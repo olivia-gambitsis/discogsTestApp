@@ -1,12 +1,14 @@
 {
+  "homepage": "https://olivia-gambitsis.github.io/oliviasDiscogsTestApp",
   "name": "Discogs test app",
   "private": true,
   "version": "5.0.0",
   "scripts": {
-    "build:uat": "vite build --mode uat",
-    "build:production": "vite build --mode production",
+    "build": "vite build",
     "dev:local": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy" : "pnpm run build",
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "@mantine/core": "^7.8.0",
@@ -30,6 +32,7 @@
     "@types/react-dom": "^18.0.10",
     "@types/react-window": "^1.8.8",
     "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.1.1",
     "vite": "^5.2.8"
   }
 }
