@@ -1,0 +1,13 @@
+
+.hover{
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.025);
+    }
+}
+
+.avatarSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

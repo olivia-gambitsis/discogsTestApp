@@ -1,0 +1,28 @@
+.inner {
+	height: 100%;
+	flex-direction: row;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 1.2rem;
+}
+
+.links {
+	@media (max-width: $mantine-breakpoint-xs) {
+		display: none;
+	}
+}
+
+.banner {
+	width: 100%;
+	text-align: center;
+	background-color: var(--mantine-color-neutral-2);
+	color: white;
+	margin-top: 15px;
+	max-height: 25px;
+	overflow: hidden;
+
+	& a {
+		color: white
+	}
+}
