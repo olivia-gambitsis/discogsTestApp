@@ -8,7 +8,7 @@
     "dev:local": "vite",
     "preview": "vite preview",
     "predeploy" : "pnpm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "@mantine/core": "^7.8.0",
