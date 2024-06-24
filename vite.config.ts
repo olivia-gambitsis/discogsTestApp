@@ -6,5 +6,4 @@ export default defineConfig({
         port: 5175
     },
     plugins: [react()],
-    base: "https://olivia-gambitsis.github.io/olivias-discogs-test-app"
 });

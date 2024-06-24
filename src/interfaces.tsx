@@ -41,7 +41,7 @@ export interface ArtistsResponse {
     results: Artist[];
 }
 
-export interface ReleaseRsponse{
+export interface ReleaseResponse{
     pagination: Pagination;
     releases: Release[]
 }

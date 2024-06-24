@@ -16,13 +16,11 @@ export const useMenuOpened = create<{ menuOpened: boolean, toggle: () => void }>
 
 export default function App() {
 
-    const {menuOpened, toggle: toggleMenu} = useMenuOpened();
     const isMobile = useMediaQuery(`(max-width: ${em(600)})`);
     const computedColorScheme = useComputedColorScheme('light', {getInitialValueInEffect: true});
 
     return (
         <>
-            <Notifications position='top-right'/>
             <ModalsProvider>
 
                 <AppShell header={{height: isMobile ? 60 : 80}} h={'100%'} padding='md'
