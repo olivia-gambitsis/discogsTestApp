@@ -25,9 +25,6 @@ export function DashboardPage() {
 		}
 	);
 
-	console.log(activePage)
-
-
 
 	return (
 		<>
@@ -56,16 +53,19 @@ export function DashboardPage() {
 						</Grid>
 					:
 					<>
-						<Grid>
-							{
-								allArtists?.results.map((artist) => <Grid.Col
-									span={{base: 12, sm: 6, md: 4, xxl: 3}}><ArtistCard artist={artist}/></Grid.Col>)
-							}
-
-						</Grid>
 						{allArtists &&
-							<Pagination total={allArtists?.pagination.pages} value={activePage} onChange={setPage}
-										mt="sm" color={'violet'}/>
+							<>
+								<Grid>
+									{
+										allArtists?.results.map((artist) => <Grid.Col
+											span={{base: 12, sm: 6, md: 4, xxl: 3}}><ArtistCard
+											artist={artist}/></Grid.Col>)
+									}
+
+								</Grid>
+								<Pagination total={allArtists?.pagination.pages} value={activePage} onChange={setPage}
+											mt="sm" color={'violet'}/>
+							</>
 						}
 					</>
 			}

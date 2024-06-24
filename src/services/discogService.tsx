@@ -9,17 +9,47 @@ const instance = axios.create({
 });
 
 export const searchArtists = async (search: string, page: number) => {
-    const res = await instance.get(`/database/search?q=${search}&type=artist&page=${page}&per_page=20`)
-    return res.data as ArtistsResponse
+    try {
+        const res = await instance.get(`/database/search?q=${search}&type=artist&page=${page}&per_page=20`)
+        return res.data as ArtistsResponse
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            console.log(error.status)
+            console.error(error.response);
+            return error.response
+        } else {
+            console.error(error);
+        }
+    }
 }
 
 
-export const releasesFromArtist = async (artistId: string, page: number)  => {
-    const res = await instance.get(`/artists/${artistId}/releases?page=${page}&per_page=5`)
-    return res.data as ReleaseResponse
+export const releasesFromArtist = async (artistId: string, page: number) => {
+    try{
+        const res = await instance.get(`/artists/${artistId}/releases?page=${page}&per_page=5`)
+        return res.data as ReleaseResponse
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            console.log(error.status)
+            console.error(error.response);
+            return error.response
+        } else {
+            console.error(error);
+        }
+    }
 }
 
-export const getReleaseByID = async (releaseId: string)  => {
-    const res = await instance.get(`/releases/${releaseId}`)
-    return res.data as ReleaseResponse
+export const getReleaseByID = async (releaseId: string) => {
+    try{
+        const res = await instance.get(`/releases/${releaseId}`)
+        return res.data as ReleaseResponse
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            console.log(error.status)
+            console.error(error.response);
+            return error.response
+        } else {
+            console.error(error);
+        }
+    }
 }
