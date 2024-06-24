@@ -33,14 +33,14 @@ export function DashboardPage() {
 		<>
 		<form onSubmit={form.onSubmit((value) => setSearchValue(value.artist))}>
 			<Flex align={'center'} justify={'center'} gap={'md'} mb={'xl'}>
-				<TextInput placeholder="Type and artists name" size="lg" type="text" {...form.getInputProps('artist')} />
+				<TextInput placeholder="Type an artist name" size="lg" type="text" {...form.getInputProps('artist')} />
 				<Button type={'submit'}>Search</Button>
 			</Flex>
 		</form>
 			{
 				isLoadingArtists ?
-					<Grid>
-						<Grid>
+
+						<Grid gutter={'xl'}>
 							<Grid.Col span={{ base: 12, sm: 6, md: 4, xxl: 3 }}>
 								<Skeleton height={200} width={450} radius="lg" />
 							</Grid.Col>
@@ -54,7 +54,7 @@ export function DashboardPage() {
 								<Skeleton height={200} width={450} radius="lg" />
 							</Grid.Col>
 						</Grid>
-					</Grid>:
+					:
 					<>
 						<Grid>
 							{

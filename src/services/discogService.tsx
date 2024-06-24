@@ -9,7 +9,7 @@ const instance = axios.create({
 });
 
 export const searchArtists = async (search: string, page: number) => {
-    const res = await instance.get(`/database/search?q=${search}&type=artist?page=${page}&per_page=20`)
+    const res = await instance.get(`/database/search?q=${search}&type=artist&page=${page}&per_page=20`)
     return res.data as ArtistsResponse
 }
 
