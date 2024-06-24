@@ -1,6 +1,6 @@
 {
   "homepage": "https://olivia-gambitsis.github.io/oliviasDiscogsTestApp",
-  "name": "Discogs test app",
+  "name": "olivias-discogs-test-app",
   "private": true,
   "version": "5.0.0",
   "scripts": {

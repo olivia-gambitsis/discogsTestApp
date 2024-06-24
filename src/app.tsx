@@ -1,12 +1,8 @@
 import '@mantine/core/styles.css';
 import {AppShell, Box, em, useComputedColorScheme} from '@mantine/core';
 import {ModalsProvider} from '@mantine/modals';
-import {Notifications} from '@mantine/notifications';
 import {Outlet} from 'react-router-dom';
 import './base.css';
-import 'mantine-react-table/styles.css';
-import '@mantine/carousel/styles.css';
-import '@mantine/spotlight/styles.css';
 import {useMediaQuery} from '@mantine/hooks';
 import {create} from 'zustand';
 import {AppHeader} from "./appShell/appHeader";
