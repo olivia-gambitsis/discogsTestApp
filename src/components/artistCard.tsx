@@ -15,7 +15,7 @@ export function ArtistCard({artist}: { artist: Artist }) {
                   className={classes.hover}>
                     <Card.Section p={'md'}>
                         <Flex direction={'row'} gap={'md'}>
-                            <Avatar src={artist.cover_image} w={100} h={100} radius={'lg'} alt="Doctor photo"/>
+                            <Avatar src={artist.cover_image} w={100} h={100} radius={'lg'} alt="Artist image"/>
                             <Flex direction={'column'} mt={'sm'} justify={'center'}>
                                 <Text fw={500}>
                                     {artist.title}

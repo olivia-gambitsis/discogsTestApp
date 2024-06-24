@@ -5,7 +5,7 @@ import {ArtistsResponse, ReleaseResponse} from "../interfaces";
 const instance = axios.create({
     baseURL: 'https://api.discogs.com/',
     timeout: 1000,
-    headers: {'Authorization': `Discogs key=${import.meta.env.VITE_API_KEY}, secret=${import.meta.env.VITE_API_SECRET}`, 'user-agent': 'oliviaTestApp/1.0'}
+    headers: {Authorization: `Discogs key=${import.meta.env.VITE_API_KEY}, secret=${import.meta.env.VITE_API_SECRET}`}
 });
 
 export const searchArtists = async (search: string, page: number) => {
